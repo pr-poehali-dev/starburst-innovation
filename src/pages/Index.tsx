@@ -1,4 +1,4 @@
-import { Fish, Star, TrendingUp, Heart, Plus, Minus, Mail, MapPin, Phone } from "lucide-react"
+import { Fish, Star, TrendingUp, Heart, Plus, Minus, Mail, MapPin, Phone, Clock, Banknote, Building2 } from "lucide-react"
 import Icon from "@/components/ui/icon"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
@@ -156,6 +156,93 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Качественный продукт</h3>
               <p className="text-white/80 leading-relaxed">Продаёте то, чем гордитесь — настоящую рыбу и икру.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Salary / Schedule / Addresses Section */}
+      <section className="relative z-10 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-balance">Условия работы</h2>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto text-pretty">
+              Всё честно и прозрачно — никаких сюрпризов после выхода на работу.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Salary */}
+            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-10">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#00B4D8]/10 ring-1 ring-[#00B4D8]/30 mb-8">
+                <Banknote className="w-7 h-7 text-[#00B4D8]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-6">Заработная плата</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Оклад</span>
+                  <span className="font-semibold">от 40 000 ₽</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Премия</span>
+                  <span className="font-semibold">до 15 000 ₽</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Итого</span>
+                  <span className="font-bold text-[#00B4D8] text-lg">до 55 000 ₽/мес</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-white/70">Выплаты</span>
+                  <span className="font-semibold">2 раза в месяц</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Schedule */}
+            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-10">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#00B4D8]/10 ring-1 ring-[#00B4D8]/30 mb-8">
+                <Clock className="w-7 h-7 text-[#00B4D8]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-6">Режим работы</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">График</span>
+                  <span className="font-semibold">2/2 или 5/2</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Смена</span>
+                  <span className="font-semibold">9:00 — 21:00</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Тип занятости</span>
+                  <span className="font-semibold">Полная</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-white/70">Оформление</span>
+                  <span className="font-semibold">По ТК РФ</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Addresses */}
+            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-10">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#00B4D8]/10 ring-1 ring-[#00B4D8]/30 mb-8">
+                <Building2 className="w-7 h-7 text-[#00B4D8]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-6">Адреса магазинов</h3>
+              <div className="space-y-4">
+                {[
+                  "ул. Карла Маркса, 69",
+                  "ул. Ленина, 45",
+                  "ул. Тихоокеанская, 204",
+                  "ТЦ «Броско Молл»",
+                ].map((addr) => (
+                  <div key={addr} className="flex items-start gap-3 py-3 border-b border-white/10 last:border-0">
+                    <MapPin className="w-4 h-4 text-[#00B4D8] mt-0.5 flex-shrink-0" />
+                    <span className="text-white/90 text-sm leading-relaxed">{addr}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
